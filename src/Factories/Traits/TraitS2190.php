@@ -134,7 +134,7 @@ trait TraitS2190
         $this->dom->addChild(
             $infoRegPrelim,
             "natAtividade",
-            $this->std->natatividade ?? null,
+            isset($this->std->natatividade) ? $this->std->natatividade : null,
             false
         );
         if (!empty($this->std->inforegctps)) {
