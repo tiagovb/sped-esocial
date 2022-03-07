@@ -52,5 +52,5 @@
             "NFePHP\\eSocial\\Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
