@@ -52,16 +52,5 @@
             "NFePHP\\eSocial\\Tests\\": "tests/"
         }
     },
-    "scripts": {
-        "test": "phpunit",
-        "phpcbf": "vendor/bin/phpcbf --standard=psr2 src/",
-        "phpcs": "vendor/bin/phpcs --standard=psr2 src/",
-        "phpstan": "vendor/bin/phpstan analyse src/ --level 7"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        }
-    },
     "minimum-stability": "dev"
 }
