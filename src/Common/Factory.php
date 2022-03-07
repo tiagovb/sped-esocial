@@ -136,7 +136,8 @@ abstract class Factory
         $this->layout = $stdConf->eventoVersion;
         $this->tpInsc = $stdConf->empregador->tpInsc;
         $this->nrInsc = $stdConf->empregador->nrInsc;
-        $this->nmRazao = $stdConf->empregador->nmRazao ?? null;
+        //$this->nmRazao = $stdConf->empregador->nmRazao ?? null;
+        $this->nmRazao = isset($stdConf->empregador->nmRazao) ? $stdConf->empregador->nmRazao : null;
         $this->layoutStr = $this->strLayoutVer($this->layout);
         $this->certificate = $certificate;
         if (empty($std) || ! is_object($std)) {
@@ -270,7 +271,8 @@ abstract class Factory
                 $this->tpInsc,
                 $this->nrInsc,
                 $this->date,
-                $this->std->sequencial ?? null
+                //$this->std->sequencial ?? null
+                isset($this->std->sequencial) ? $this->std->sequencial : null
             );
             $this->node = $this->dom->createElement($this->evtName);
             $att = $this->dom->createAttribute('Id');
