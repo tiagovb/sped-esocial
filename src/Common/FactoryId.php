@@ -22,7 +22,7 @@ class FactoryId
         $sequential = null
     ) {
         if (empty($sequential)) {
-            $mt = str_replace('.', '', (string) microtime(true));
+            $mt = preg_replace('/[^0-9]/', '',  (string) microtime(true));
             $sequential = rand(0, 9) . substr($mt, -4);
         }
         if (empty($date)) {
