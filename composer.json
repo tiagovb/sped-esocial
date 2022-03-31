@@ -22,20 +22,6 @@
             "role": "Developer"
         }
     ],
-    "repositories": {
-        "sped-common": {
-            "type": "package",
-            "package": {
-                "name": "tiagovb/sped-common",
-                "version": "dev-master",
-                "source": {
-                    "url": "https://github.com/tiagovb/sped-common.git",
-                    "type": "git",
-                    "reference": "origin/master"
-                }
-            }
-        }
-    },
     "require": {
         "php" : ">=5.6",
         "ext-curl": "*",
@@ -46,7 +32,6 @@
         "ext-openssl": "*",
         "ext-simplexml": "*",
         "ext-xml": "*",
-        "tiagovb/sped-common": "dev-master",
         "justinrainbow/json-schema": "5.2",
         "league/flysystem": "1.0"
     },
