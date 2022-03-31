@@ -3,7 +3,7 @@
 namespace NFePHP\eSocial\Common;
 
 use JsonSchema\Constraints\Constraint;
-use JsonSchema\Constraints\Factory;
+use JsonSchema\Constraints\Factory as JsonSchemaConstraintFactory;
 use JsonSchema\SchemaStorage;
 use JsonSchema\Validator;
 use NFePHP\eSocial\Common\TranslateJsonValidation;
@@ -21,7 +21,7 @@ class JsonValidation
         $jsonSchemaObject = json_decode((string)file_get_contents($jsonschema));
         $schemaStorage = new SchemaStorage();
         $schemaStorage->addSchema("file:{$definitions}", $jsonSchemaObject);
-        $jsonValidator = new Validator(new Factory($schemaStorage));
+        $jsonValidator = new Validator(new JsonSchemaConstraintFactory($schemaStorage));
         $jsonValidator->validate($std, $jsonSchemaObject, Constraint::CHECK_MODE_COERCE_TYPES);
         if ($jsonValidator->isValid()) {
             return [];
