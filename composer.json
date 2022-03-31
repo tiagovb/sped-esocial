@@ -22,12 +22,20 @@
             "role": "Developer"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/tiagovb/sped-common"
+    "repositories": {
+        "sped-common": {
+            "type": "package",
+            "package": {
+                "name": "tiagovb/sped-common",
+                "version": "dev-master",
+                "source": {
+                    "url": "https://github.com/tiagovb/sped-common.git",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
         }
-    ],
+    },
     "require": {
         "php" : ">=5.6",
         "ext-curl": "*",
