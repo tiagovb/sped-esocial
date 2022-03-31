@@ -57,6 +57,5 @@
         "psr-4": {
             "NFePHP\\eSocial\\Tests\\": "tests/"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
