@@ -10,10 +10,16 @@ use NFePHP\eSocial\Common\TranslateJsonValidation;
 
 class JsonValidation
 {
+    /**
+     * @param \stdClass $std
+     * @param string $jsonschema
+     * @param string $definitions
+     * @return array
+     */
     public static function validate(
         \stdClass $std,
-        string $jsonschema,
-        string $definitions
+        $jsonschema,
+        $definitions
     ) {
         if (!is_file($jsonschema) || !is_file($definitions)) {
             return [];
