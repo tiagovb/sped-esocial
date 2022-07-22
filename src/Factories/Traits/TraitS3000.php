@@ -138,12 +138,16 @@ trait TraitS3000
         }
         if (!empty($this->std->idefolhapagto)) {
             $ideFolhaPagto = $this->dom->createElement("ideFolhaPagto");
-            $this->dom->addChild(
-                $ideFolhaPagto,
-                "indApuracao",
-                $this->std->idefolhapagto->indapuracao,
-                true
-            );
+            
+            if (!empty($this->std->idefolhapagto->indapuracao)) {
+                $this->dom->addChild(
+                    $ideFolhaPagto,
+                    "indApuracao",
+                    $this->std->idefolhapagto->indapuracao,
+                    true
+                );
+            }
+            
             $this->dom->addChild(
                 $ideFolhaPagto,
                 "perApur",
